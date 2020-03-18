@@ -46,7 +46,7 @@ Next, the starting node and target node must be set.
 
 Finally, you can pick the desired search algorithm and start the search.
 
-![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX5.png)
+![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX5.png) 
 
 
 ## Meta
