@@ -37,11 +37,11 @@ _For more examples and usage, please refer to the [Wiki][wiki]._
 
 ## Meta
 
-Anel Music– [@YourTwitter](https://www.linkedin.com/in/anelmusic/) – anel.music@web.de
+Anel Music– [@LinkedIn](https://www.linkedin.com/in/anelmusic/) – anel.music@web.de
 
 Distributed under the XYZ license. See ``LICENSE`` for more information.
 
-[https://github.com/yourname/github-link](https://github.com/AnelMusic/)
+[https://github.com/AnelMusic/github-link](https://github.com/AnelMusic/)
 
 ## Contributing
 
