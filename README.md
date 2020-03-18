@@ -1,12 +1,11 @@
 # Python-Kivy-Pathfinder-Visualization
-User Interface allows you to create walls, set a starting and a goal position and pick a common search algorithm. This visualization aims to
+> The tool presented here searches the path between a starting node and a goal node. The search is illustrated step by step. The search algorithm can be chosen freely.
 
-# Product Name
-> Short blurb about what your product does.
+The user only has to insert obstacles/walls, choose the starting and destination node and select the desired search algorithm.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+
+
+
 
 One to two paragraph statement about your product and what it does.
 
@@ -14,25 +13,34 @@ One to two paragraph statement about your product and what it does.
 
 ## Installation
 
-OS X & Linux:
+### Ubuntu / Kubuntu / Xubuntu / Lubuntu (Saucy and above)¶
 
-```sh
-npm install my-crazy-module --save
+#### Add one of the PPAs as you prefer
+
 ```
+        stable builds:	$ sudo add-apt-repository ppa:kivy-team/kivy
+        nightly builds:	$ sudo add-apt-repository ppa:kivy-team/kivy-daily
+```
+#### Update your package list using your package manager
+```
+        $ sudo apt-get update
+```
+#### Install Kivy
+```
+        Python2 - python-kivy:
+         	$ sudo apt-get install python-kivy
+        Python3 - python3-kivy:
+         	$ sudo apt-get install python3-kivy
+        optionally the gallery of Examples - kivy-examples:
+         	$ sudo apt-get install kivy-examples
+```
+  
 ## Usage example
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
 
 ## Meta
 
@@ -50,11 +58,4 @@ Distributed under the XYZ license. See ``LICENSE`` for more information.
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
 
