@@ -53,7 +53,7 @@ Finally, you can pick the desired search algorithm and start the search.
 
 Anel Music– [@LinkedIn](https://www.linkedin.com/in/anelmusic/) – anel.music@web.de
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/AnelMusic/](https://github.com/AnelMusic/)
 
