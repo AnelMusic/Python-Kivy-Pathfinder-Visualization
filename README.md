@@ -31,13 +31,13 @@ The user only has to insert obstacles/walls, choose the starting and destination
 ## Usage example
 
 
-![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX1.png | width=100)
+![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX1.png)
 
+![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX2.png)
 
-        Pathfinder_EX1.png
-A few motivating and useful examples of how your product can be used. Spice this up with Pathfinder_EX1code blocks and potentially more screenshots.
+![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX3.png)
 
-_For more examples and usage, please refer to the [Wiki][wiki]._
+![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX4.png)
 
 
 ## Meta
