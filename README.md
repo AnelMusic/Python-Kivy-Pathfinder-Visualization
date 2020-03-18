@@ -4,28 +4,21 @@
 The user only has to insert obstacles/walls, choose the starting and destination node and select the desired search algorithm.
 
 
-
-
-
-One to two paragraph statement about your product and what it does.
-
-![](header.png)
-
 ## Installation
 
-### Ubuntu / Kubuntu / Xubuntu / Lubuntu (Saucy and above)¶
+#### Ubuntu / Kubuntu / Xubuntu / Lubuntu (Saucy and above)¶
 
-#### Add one of the PPAs as you prefer
+##### Add one of the PPAs as you prefer
 
 ```
         stable builds:	$ sudo add-apt-repository ppa:kivy-team/kivy
         nightly builds:	$ sudo add-apt-repository ppa:kivy-team/kivy-daily
 ```
-#### Update your package list using your package manager
+##### Update your package list using your package manager
 ```
         $ sudo apt-get update
 ```
-#### Install Kivy
+##### Install Kivy
 ```
         Python2 - python-kivy:
          	$ sudo apt-get install python-kivy
