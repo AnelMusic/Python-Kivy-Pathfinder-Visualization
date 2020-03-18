@@ -30,7 +30,7 @@ The user only has to insert obstacles/walls, choose the starting and destination
   
 ## Usage example
 
-![](ttps://github.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/Pathfinder_EX1.png | width=100) 	
+![](https://github.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/Pathfinder_EX1.png | width=100) 	
         Pathfinder_EX1.png
 A few motivating and useful examples of how your product can be used. Spice this up with Pathfinder_EX1code blocks and potentially more screenshots.
 
