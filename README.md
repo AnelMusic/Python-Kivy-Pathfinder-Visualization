@@ -57,6 +57,12 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 [https://github.com/AnelMusic/](https://github.com/AnelMusic/)
 
+## Known Issues
+1. Dijkstra must be debuggned - Currently does not start
+2. Best-First-Search must be implemented
+3. Bidirectional Dijkstra must be implemented
+
+
 ## Contributing
 
 1. Fork it (<https://github.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/fork>)
