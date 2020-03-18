@@ -32,13 +32,16 @@ The user only has to insert obstacles/walls, choose the starting and destination
 
 
 ![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX1.png)
+The navigation bar shows which input is expected from the user. First of, obstacle elements must be placed by mouse click.
 
 ![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX2.png)
+First of, obstacle elements must be placed by mouse click.
 
 ![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX3.png)
+Next, the starting node and target node must be set.
 
 ![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX4.png)
-
+Finally, you can pick the desired search algorithm and start the search.
 
 ## Meta
 
