@@ -32,7 +32,10 @@ The user only has to insert obstacles/walls, choose the starting and destination
 
 ![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX1.png)
 
-The navigation bar shows which input is expected from the user. First of, obstacle elements must be placed by mouse click.
+The navigation bar shows which input is expected from the user. First of, obstacle elements must be placed by mouse click. The number of remaining obstacles to place is shown in the navigation bar at the top. You can change the number of obstacles in the config.py file. 
+```
+        MAX_WALLELEMENTS = 5 # number of obstacles
+```
 
 ![alt text](https://raw.githubusercontent.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/master/Pathfinder_EX2.png)
 
@@ -62,7 +65,6 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 2. Best-First-Search must be implemented
 3. Bidirectional Dijkstra must be implemented
 
-
 ## Contributing
 
 1. Fork it (<https://github.com/AnelMusic/Python-Kivy-Pathfinder-Visualization/fork>)
@@ -70,5 +72,3 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
-
-
