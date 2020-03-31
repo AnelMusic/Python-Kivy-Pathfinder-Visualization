@@ -104,7 +104,7 @@ class MyGrid(GridLayout):
                         Clock.schedule_interval(self.update_exploration_field, config.update_exploration_rate)
                 #Bidirectional Dijkstra
                 if self.algorithm == config.ALGORITHM_BIDIRECTIONAL_DIJKSTRA:
-                    self.path, self.closed_set = pf.find_path_bidirect_dijkstra()
+                    self.path, self.closed_set = pf.find_path_dijkstra()
                     print("LEN PATH ? ", len(self.path))
                     for node in self.path:
                         print("Path:   ", node.position)
