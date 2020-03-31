@@ -1,9 +1,3 @@
-
-[![GitHub last commit][last-commit-shield]][last-commit-url]
-[![GitHub repo size in bytes][repo-size-shield]][repo-size-url]
-[![Contributors][contributors-shield]][contributors-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![Travis](https://img.shields.io/badge/language-Python-red.svg)]()
 ![Total visitor](https://visitor-count-badge.herokuapp.com/total.svg?repo_id=69802909)
 
