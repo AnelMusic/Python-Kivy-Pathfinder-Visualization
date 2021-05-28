@@ -24,7 +24,6 @@ class MyApp(App):
 class MyGrid(GridLayout):
     def __init__(self, **kwargs):
         super(MyGrid, self).__init__(**kwargs)
-        #root = Widget()
         self.cols = 1
         self.TARGET_NODE_SET = False
         self.START_NODE_SET = False
@@ -43,8 +42,6 @@ class MyGrid(GridLayout):
 
         self.initGui()
         self.info_label.text = "Set Wall Elements   ["+str(self.left_wall_elements)+"] left"
-        #self.submit_btn = Button(text = "Submit",  size_hint=(1, None))
-        #self.add_widget(self.submit_btn)
 
     def pressed(self, instance):
         if self.left_wall_elements >= 0:
@@ -66,36 +63,24 @@ class MyGrid(GridLayout):
                 self.target_node = instance.id
                 self.TARGET_NODE_SET = True
                 self.info_label.text = "Select Algorithm"
-
-
-            elif (self.num_buttons_clicked == 2):
-                # routine to set all buttons
-                # for i in range(len(self.dynamic_id_dict)):
-                #    self.dynamic_id_dict[i].disabled = True
-                pass
-                #self.find_path()
+            
             self.num_buttons_clicked+=1
         else:
             instance.background_color =config.btn_clicked_color
             instance.disabled = True
             self.num_wall_buttons_clicked+=1
-
-            #problem dass dass dieses dictionary nicht meinem format entspricht
-            # greife auf index zu, dabei ist es jetzt ein dictionary
-            # einfach in die Map die id reinhauen
             self.map_wall_list.append(instance.id)
-            print("[DEBUG] WALL BUTTON =    ", instance.id)
 
-    # 2 Possible Events: Start button clicked or Clear button clicked
+    
     def top_menue_pressed(self, instance):
-        print("[DEBUG] BUTTON =    ", instance.id)
+        # 2 Possible Events: Start button clicked or clear button clicked
         if instance.id == "start_btn":
             if self.START_NODE_SET == True and self.TARGET_NODE_SET and self.ALGORITHM_SET:
                 self.info_label.text = "Planner is searching for Target Node"
                 world_grid = grid.Grid((self.map_layout.rows , self.map_layout.cols), self.map_wall_list)
                 pf = pathfinder.Pathfinder(world_grid, self.map_wall_list, self.start_node, self.target_node)
-
                 #Astar
+                ######
                 if self.algorithm == config.ALGORITHM_ASTAR:
                     self.path, self.closed_set = pf.find_path_astar()
                     if self.path:
@@ -103,6 +88,7 @@ class MyGrid(GridLayout):
                     else:
                         Clock.schedule_interval(self.update_exploration_field, config.update_exploration_rate)
                 #Bidirectional Dijkstra
+                ######
                 if self.algorithm == config.ALGORITHM_DIJKSTRA:
                     self.path, self.closed_set = pf.find_path_dijkstra()
                     print("LEN PATH ? ", len(self.path))
@@ -113,45 +99,35 @@ class MyGrid(GridLayout):
                         Clock.schedule_interval(self.update_exploration_field, config.update_exploration_rate)
                     else:
                         Clock.schedule_interval(self.update_exploration_field, config.update_exploration_rate)
-
                 # DFS
+                ######
                 if self.algorithm == config.ALGORITHM_DFS:
-                    #todo: wrong implementation
                     self.path, self.closed_set = pf.find_path_dfs()
                     print("FINAL_VIS STAACK LEN = ", len(self.closed_set))
                     for i in self.closed_set:
                         print("Closed set node: ", i.position)
                     if self.path:
                         Clock.schedule_interval(self.update_exploration_field, config.update_exploration_rate)
-                    #else:
-                    #    Clock.schedule_interval(self.update_exploration_field, config.update_exploration_rate)
                 # BFS
                 if self.algorithm == config.ALGORITHM_BFS:
                     # todo: Implement Algorithm
                     self.path, self.closed_set = pf.find_path_bfs()
 
-                    for node in self.path:
-                        print("___ path ____ ", node.position)
-
-
                     if self.path:
                         Clock.schedule_interval(self.update_exploration_field, config.update_exploration_rate)
                     else:
                         Clock.schedule_interval(self.update_exploration_field, config.update_exploration_rate)
-
-
-
             else:
                 print("CANT START PLANNER")
         elif instance.id == "clear_btn":
             self.reset()
 
-    # Handle reset event
     def reset(self):
         for node in self.dynamic_id_dict:
             print(node)
             self.dynamic_id_dict[node].background_color = config.node_color
             self.dynamic_id_dict[node].disabled = False
+        
         self.TARGET_NODE_SET = False
         self.START_NODE_SET = False
         self.start_node = None
@@ -164,8 +140,8 @@ class MyGrid(GridLayout):
         self.left_wall_elements = config.MAX_WALLELEMENTS
         self.info_label.text = "Set Wall Elements   ["+str(self.left_wall_elements)+"] left"
 
-    #handle dropdown events
     def drop_down_pressed(self, instance):
+        # todo: use enums for instance ids
         print("Instance ID ", instance.id)
         if instance.id == "dropdown_astar":
             self.ALGORITHM_SET = True
@@ -208,11 +184,13 @@ class MyGrid(GridLayout):
         self.top_menue_layout.add_widget(clear_btn)
 
         # Sub Menue
+        ###########
         self.sub_menue_layout = BoxLayout(orientation='horizontal', size_hint=(1, None), height=30)
         self.info_label = Label(id="info_label", text="Info Text", font_name='DejaVuSans')
         self.sub_menue_layout.add_widget(self.info_label)
 
         # Map ( BtnMap)
+        ###########
         self.map_layout = GridLayout()
         self.map_layout.cols = 15
         self.map_layout.rows = 15
@@ -222,17 +200,13 @@ class MyGrid(GridLayout):
             x = int(i / self.map_layout.cols)
             y = i % self.map_layout.cols
             string_id = "(" + str(x) + ", " + str(y) + ")"
-
-            #           button = Button(text=str(i),
             button = Button(id=string_id,
-                            # size_hint=(None, None),   remove the wrong size
                             on_press=self.pressed, background_color=config.node_color)
-
             self.map_layout.add_widget(button)
-
             self.dynamic_id_dict.update({string_id: button})
 
         #Dropdown Btns for Algorithm Btn
+        ###########
         dropdown = DropDown()
         btn_astar = Button(text="AStar", id = "dropdown_astar",on_press=self.drop_down_pressed,size_hint_y=None, height=44, font_name='DejaVuSans', background_color=[280/255, 280/255, 280/ 225, 1])
         btn_astar.bind(on_release=lambda btn: dropdown.select(btn.text))
@@ -258,9 +232,6 @@ class MyGrid(GridLayout):
         btn_astar.bind(on_release=lambda btn: dropdown.select(btn.text))
         dropdown.add_widget(btn_astar)
         algo_btn.bind(on_release=dropdown.open)
-
-        # one last thing, listen for the selection in the dropdown list and
-        # assign the data to the button text.
         dropdown.bind(on_select=lambda instance, x: setattr(algo_btn, 'text', x))
         self.add_widget(self.top_menue_layout)
         self.add_widget(self.sub_menue_layout)
@@ -280,12 +251,6 @@ class MyGrid(GridLayout):
                     and str(self.closed_set[0].position) != self.start_node:
                 self.dynamic_id_dict[str(self.closed_set[0].position)].background_color = config.exploration_color
             self.closed_set.pop(0)
-
-            #workaround in order to trigger the path_update_method
-            # todo explain workaround a bit more in detail
-            # Kivy clock shit
-
             if len(self.closed_set) == 0:
-                print("DONE")
                 Clock.unschedule(self.update_exploration_field)
                 Clock.schedule_interval(self.update_path_field, config.update_path_rate)
