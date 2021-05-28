@@ -26,7 +26,5 @@ class Node:
     def get_g_cost(self):
         return self.g_cost
 
-
-    # Check equality of all attributes with dunder method (convenient way for caparing nodes)
     def __eq__(self, other) :
         return self.__dict__ == other.__dict__
