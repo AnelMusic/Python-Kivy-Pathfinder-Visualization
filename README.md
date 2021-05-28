@@ -1,5 +1,7 @@
 [![Travis](https://img.shields.io/badge/language-Python-red.svg)]()
 
+![](pathfinder.gif)
+
 # Python-Kivy-Pathfinder-Visualization
 > The tool presented here searches the path between a starting node and a goal node. The search is illustrated step by step. The search algorithm can be chosen freely.
 
