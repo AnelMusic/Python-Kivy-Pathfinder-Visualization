@@ -67,6 +67,7 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 ## Known Issues
 1. Best-First-Search must be implemented
 2. Bidirectional Dijkstra must be implemented
+3. CLI needed
 
 ## Contributing
 
